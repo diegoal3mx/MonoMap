@@ -6,6 +6,7 @@ export class CasesRoutes{
     const router = Router();
     const controller = new CasesController();
     router.get('/', controller.getCases);
+    router.get('/latest', controller.getLatestCases);
     router.get('/:id', controller.getCaseById);
     router.post("/", controller.createCase);
     router.put("/:id", controller.updateCase);
