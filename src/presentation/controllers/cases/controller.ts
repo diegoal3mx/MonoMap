@@ -15,7 +15,7 @@ export class CasesController{
     try {
       const lastWeek = new Date()
       lastWeek.setDate(lastWeek.getDate()-7)
-      const latestCases = await CaseModel.find({creationDate:lastWeek})
+      const latestCases = await CaseModel.find({creationDate:{$gte: lastWeek}})
       return res.json(latestCases)
     } catch(error){
       return res.json([]);
