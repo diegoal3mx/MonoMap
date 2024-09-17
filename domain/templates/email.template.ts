@@ -1,6 +1,6 @@
 import { envs } from "../../src/config/envs.plugin";
 
-export function generateCaseEmailTemplate(creationDate: string, genre:string, age:number, lat: number, lng: number): string {
+export function generateCaseEmailTemplate(creationDate: Date, genre:string, age:number, lat: number, lng: number): string {
 const mapboxUrl = generateMapboxStaticImageURL(lat,lng)
 return `
 <!DOCTYPE html>
