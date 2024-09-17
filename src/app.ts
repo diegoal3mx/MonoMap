@@ -22,6 +22,6 @@ app.use(AppRoutes.routes);
   
   app.post("/",async(req,res)=>{
     const {genre,age,lat,lng} = req.body
-    const newIncident = await CaseModel.create({genre,age,lat,lng})
+    const newCase = await CaseModel.create({genre,age,lat,lng})
     res.send("Registro creado")
   })
